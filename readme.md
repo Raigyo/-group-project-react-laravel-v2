@@ -39,6 +39,8 @@ To get a development env running, install all the dependencies with:
 
 ```cmd
 composer install && npm install
+
+composer update
 ```
 
 Don't forget to edit your .env file. If you do not have one:
@@ -244,3 +246,8 @@ Allows the user to subscribe to an event.
 _(must be logged)_
 _(Id is the id of the event)_
 Allow the user to unsubscribe to an event.
+
+## Useful links
+
+-   [How To Deploy Laravel Project On Heroku](https://appdividend.com/2022/03/01/how-to-deploy-laravel-project-on-heroku/)
+-   [Getting Started with Heroku, Postgres and PgAdmin — RUN\_\_ON Part 2](https://medium.com/@vapurrmaid/getting-started-with-heroku-postgres-and-pgadmin-run-on-part-2-90d9499ed8fb)
