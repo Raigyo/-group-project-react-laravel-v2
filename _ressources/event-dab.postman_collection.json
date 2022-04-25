@@ -1,0 +1,424 @@
+{
+	"info": {
+		"_postman_id": "c1e9000e-29bd-4157-a90b-992d7017c791",
+		"name": "event-dab Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Testeur\",\n\t\"email\":\"test@gmail.com\",\n\t\"password\":\"pass1234\"\n}"
+				},
+				"url": {
+					"raw": "{{localhost}}/api/register",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "\t"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2d333f51-9f98-4403-919b-f1aed69bff57",
+						"exec": [
+							"postman.setEnvironmentVariable(\"access_token\", JSON.parse(responseBody).access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"test@gmail.com\",\n\t\"password\":\"pass1234\"\n}"
+				},
+				"url": {
+					"raw": "{{localhost}}/api/login",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7ade7bb8-08f3-4f0e-87db-d33581dd47dc",
+						"exec": [
+							"postman.setEnvironmentVariable(\"access_token\", JSON.parse(responseBody).access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n}"
+				},
+				"url": {
+					"raw": "{{localhost}}/api/logout",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get past event",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{localhost}}/api/pastEvent",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"pastEvent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get futur event",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{localhost}}/api/futurEvent",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"futurEvent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{localhost}}/api/events",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get event by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{localhost}}/api/event/3",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"event",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get my events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{localhost}}/api/myEvents",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"myEvents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add event",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4f6ae2a0-39f0-4675-8629-4a5ff2f976a8",
+						"exec": [
+							"postman.setEnvironmentVariable(\"access_token\", JSON.parse(responseBody).access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Spartacus Land\",\n\t\"date_event\" : \"2019-3-01 17:30:00\",\n\t\"description\" : \"SPARTAA\",\n\t\"reminder\" : \"2019-03-29 10:00:00\",\n\t\"image_url\": \"https://st3.depositphotos.com/3001967/19099/v/600/depositphotos_190997272-stock-video-sad-lonely-man-in-party.jpg\"\n}"
+				},
+				"url": {
+					"raw": "{{localhost}}/api/event",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"event"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update event",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "65ed5abe-93a5-4aea-a1b7-c6caabe08de9",
+						"exec": [
+							"postman.setEnvironmentVariable(\"access_token\", JSON.parse(responseBody).access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Sleeping All Day\",\n\t\"date_event\" : \"2019-9-01 09:00:00\",\n\t\"description\" : \"Let's just sleep\",\n\t\"reminder\" : \"2019-03-29 10:00:00\",\n\t\"image_url\":\"https://st3.depositphotos.com/3001967/19099/v/600/depositphotos_190997272-stock-video-sad-lonely-man-in-party.jpg\"\n}"
+				},
+				"url": {
+					"raw": "{{localhost}}/api/event/2",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"event",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inscription",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{localhost}}/api/inscription/3",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"inscription",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unsub",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{localhost}}/api/unsubscribe/3",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"unsubscribe",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{access_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "81be609e-8f77-4c25-b96d-7e607252ac40",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "03da8b3c-53ed-4065-88cb-8e214b3296c8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b4099e89-6793-4b4e-9bb7-d757c47b20ef",
+			"key": "localhost",
+			"value": "localhost:8000",
+			"type": "string"
+		},
+		{
+			"id": "bdf2e565-7a4c-4c4e-b97e-200b9ce0b08e",
+			"key": "ACCES_TOKEN",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
