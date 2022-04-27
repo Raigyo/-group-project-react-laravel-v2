@@ -4,7 +4,7 @@
 
 _March - April 2019 (edited April 2022)_
 
-> 🔨 CRUD Application to manage events online. If you want to know how does it look like check it out on [Heroku](https://raigyo-event-dab.herokuapp.com/)
+> 🔨 CRUD Application to manage events online. If you want to know how does it look like check it out on [Heroku](https://raigyo-event-dab.herokuapp.com/).
 
 ---
 
