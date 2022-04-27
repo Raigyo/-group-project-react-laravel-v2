@@ -4,9 +4,11 @@
 
 _March - April 2019 (edited April 2022)_
 
-> 🔨 CRUD Application to manage events online. If you want to know how does it look like check it out on [Heroku](https://event-dab.herokuapp.com/)
+> 🔨 CRUD Application to manage events online. If you want to know how does it look like check it out on [Heroku](https://raigyo-event-dab.herokuapp.com/)
 
 ---
+
+![capture](_img-readme/event-dab.png)
 
 ## Built With
 
@@ -252,3 +254,4 @@ Allow the user to unsubscribe to an event.
 -   [How To Deploy Laravel Project On Heroku](https://appdividend.com/2022/03/01/how-to-deploy-laravel-project-on-heroku/)
 -   [Getting Started with Heroku, Postgres and PgAdmin — RUN\_\_ON Part 2](https://medium.com/@vapurrmaid/getting-started-with-heroku-postgres-and-pgadmin-run-on-part-2-90d9499ed8fb)
 -   [Laravel on Heroku - Using a PostgreSQL database](https://mattstauffer.com/blog/laravel-on-heroku-using-a-postgresql-database/)
+-   [Déployer vos applications Laravel sur Heroku](https://www.kaherecode.com/tutorial/deployer-une-application-laravel-sur-heroku)
